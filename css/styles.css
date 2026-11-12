@@ -1,0 +1,20 @@
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+.announcement-bar {
+    background-color: #352D27;
+    color: #FFFCF8;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.announcement-bar p {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
