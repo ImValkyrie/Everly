@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore product details, prices and customer reviews here at Everly.">
+    <title>Product details | Everly</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="announcement-bar">
+            <p>Little finds. Everyday joys. Welcome to everly.</p>
+        </div>
+
+        <nav class="main-nav">
+            <a href="../index.html" class="logo">everly.</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Beauty</a></li>
+                <li><a href="#">Fashion</a></li>
+                <li><a href="#">Toys</a></li>
+                <li><a href="#">Electronics</a></li>
+                <li class="mobile-login">
+                    <a href="../account/login.html">Log in</a>
+                </li>
+            </ul>
+            <div class="nav-actions">
+            <a href="../account/login.html" class="login-link">Log in</a>
+            <button class="search-button" type="button" aria-label="Search products">
+                <img src="../assets/icons/search.svg" alt="">
+            </button>
+            <a href="../cart/index.html" class="cart-link" aria-label="View shopping cart">
+                <img src="../assets/icons/shopping-bag.svg" alt="">
+                <span class="cart-count" hidden>0</span>
+            </a>
+                <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-details">
+
+            <p id="product-status" role="status" aria-live="polite">
+                Loading product...
+            </p>
+
+        <div class="product-details-container" id="product-content" hidden>
+            <div class="product-details-image">
+                <img id="product-image" src="" alt="">
+            </div>
+
+            <div class="product-details-info">
+                <h1 id="product-title"></h1>
+                <div class="product-rating">
+                    <span id="product-rating-value"></span>
+                </div>
+                <div class="product-pricing">
+                    <span id="product-price"></span>
+                    <span id="product-discounted-price"></span>
+                </div>
+                
+                <p id="product-description"></p>
+                <div id="product-tags" class="product-tags"></div>
+
+        <button type="button" id="add-to-cart" class="add-to-cart-btn">
+            Add to cart
+        </button>
+
+        <button type="button" id="share-product" class="share-product-btn">
+            <i class="fa-solid fa-share-nodes" aria-hidden="true"></i>
+            <span>Share product</span>
+        </button>
+            </div>
+        </div>
+
+        <section class="product-reviews" aria-labelledby="reviews-heading">
+            <h2 id="reviews-heading">Customer reviews</h2>
+            <div id="product-reviews"></div>
+        </section>
+
+    </section>
+    </main>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="../index.html" class="footer-logo">everly.</a>
+                    <p>Little finds. Everyday joys.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Instagram">
+                            <img src="../assets/icons/instagram.svg" alt="">
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <img src="../assets/icons/facebook.svg" alt="">
+                        </a>
+                        <a href="#" aria-label="TikTok">
+                            <img src="../assets/icons/tiktok.svg" alt="">
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <img src="../assets/icons/youtube.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <div class="footer-heading">
+                    <img src="../assets/icons/customerheadset.svg" alt="" class="footer-customerheadset-icon">
+                    <h3>Customer support</h3>
+                    </div>
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping &amp; delivery</a></li>
+                        <li><a href="#">Returns &amp; refunds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <div class="footer-heading">
+                    <img src="../assets/icons/shoppingbag2.svg" alt="" class="footer-shoppingbag2-icon">
+                    <h3>Shop</h3>
+                    </div>
+                    <ul>
+                    <li><a href="#">All products</a></li>
+                    <li><a href="#">Beauty</a></li>
+                    <li><a href="#">Fashion</a></li>
+                    <li><a href="#">Toys</a></li>
+                    <li><a href="#">Electronics</a></li>
+                    </ul>
+                    </div>
+                <div class="footer-column">
+                    <div class="footer-heading">
+                    <img src="../assets/icons/info.svg" alt="" class="footer-info-icon">
+                    <h3>About Everly</h3>
+                    </div>
+                    <ul>
+                    <li><a href="#">Our story</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Terms &amp; conditions</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-help">
+                    <div class="footer-help-text">
+                    <h3>Need help?</h3>
+                    <p>We're here for you!</p>
+                    </div>
+                    <a href="#" class="footer-support-button">
+                    <img src="../assets/icons/customerheadset.svg" alt="" class="footer-customerheadset-icon">
+                        CONTACT SUPPORT
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Everly. All rights reserved.</p>
+            <div class="footer-payments">
+                <img src="../assets/icons/visa.svg" alt="Visa">
+                <img src="../assets/icons/applepay.svg" alt="ApplePay">
+                <img src="../assets/icons/paypal.svg" alt="PayPal">
+            </div>
+            </div>
+    </footer>
+    
+    <script src="../js/navigation.js" defer></script>
+    <script src="../js/product-details.js" defer></script>
+</body>
+</html>
