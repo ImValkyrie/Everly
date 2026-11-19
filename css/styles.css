@@ -73,6 +73,10 @@ body {
     gap: 6px;
 }
 
+.dropdown-toggle:hover {
+    text-decoration: underline;
+}
+
 .dropdown-toggle i {
     font-size: 10px;
     transition: transform 0.2s ease;
@@ -105,6 +109,10 @@ body {
 .dropdown-menu li a:hover {
     background-color: #f5f0e8;
     border-radius: 4px;
+}
+
+.dropdown-menu a:hover {
+    text-decoration: underline;
 }
 
 .dropdown-menu[hidden] {
@@ -188,6 +196,9 @@ body {
     width: 22px;
     height: 22px;
     position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .cart-count {
@@ -215,6 +226,166 @@ body {
 .login-link:hover {
     text-decoration: underline;
     text-underline-offset: 5px;
+}
+
+/*=== MINI CART ===*/
+
+header {
+    position: relative;
+}
+
+.mini-cart {
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    width: 360px;
+    max-width: 90%;
+    padding: 24px;
+    background-color: #FFFCF8;
+    border: 1px solid #D8C7B3;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(53, 45, 39, 0.12);
+    z-index: 200;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    color: #352D27;
+}
+
+.mini-cart[hidden] {
+    display: none;
+}
+
+.mini-cart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #D8C7B3;
+}
+
+.mini-cart-header h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.mini-cart-close {
+    background: transparent;
+    border: none;
+    color: #352D27;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.mini-cart-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid #D8C7B3;
+}
+
+.mini-cart-subtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.mini-cart-view,
+.mini-cart-checkout {
+    display: block;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.mini-cart-view {
+    border: 1px solid #66705A;
+    color: #352D27;
+}
+
+.mini-cart-checkout {
+    background-color: #66705A;
+    color: #FFFCF8;
+}
+
+.mini-cart-view:hover {
+    background-color: #F5F0E8;
+}
+
+.mini-cart-checkout:hover {
+    background-color: #4f5946;
+}
+
+#mini-cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 20px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.mini-cart-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+}
+
+.mini-cart-item + .mini-cart-item {
+    border-top: 1px solid #D8C7B3;
+}
+
+.mini-cart-image {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.mini-cart-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+}
+
+.mini-cart-details h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.mini-cart-quantity {
+    font-size: 13px;
+    color: #66705A;
+}
+
+.mini-cart-price {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.mini-cart-remove {
+    background: transparent;
+    border: none;
+    color: #352D27;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.mini-cart-remove:hover {
+    color: #66705A;
 }
 
 /*===HERO SECTION===*/
@@ -1848,6 +2019,14 @@ body {
 
     .search-form button {
         padding: 12px 16px;
+    }
+
+    .mini-cart {
+        padding: 20px;
+    }
+
+    .mini-cart-header h2 {
+        font-size: 22px;
     }
 
     .carousel-image {

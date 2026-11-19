@@ -140,14 +140,18 @@
           >
             <img src="../assets/icons/search.svg" alt="" />
           </button>
-          <a
-            href="../cart/index.html"
+
+          <button
+            type="button"
             class="cart-link"
             aria-label="View shopping cart"
+            aria-expanded="false"
+            aria-controls="mini-cart"
           >
             <img src="../assets/icons/shopping-bag.svg" alt="" />
             <span class="cart-count" hidden>0</span>
-          </a>
+          </button>
+
           <button
             class="menu-toggle"
             type="button"
@@ -179,6 +183,32 @@
         />
         <button type="submit">Search</button>
       </form>
+
+      <div class="mini-cart" id="mini-cart" hidden>
+        <div class="mini-cart-header">
+          <h2>Your shopping cart</h2>
+          <button
+            type="button"
+            class="mini-cart-close"
+            aria-label="Close shopping cart"
+          >
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div id="mini-cart-items"></div>
+        <div class="mini-cart-footer">
+          <div class="mini-cart-subtotal">
+            <span>Subtotal</span>
+            <strong id="mini-cart-subtotal">0.00 kr</strong>
+          </div>
+          <a href="../cart/index.html" class="mini-cart-view"> View cart </a>
+
+          <a href="../checkout/index.html" class="mini-cart-checkout">
+            Checkout
+          </a>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -318,6 +348,7 @@
     </footer>
 
     <script src="../js/navigation.js" defer></script>
+    <script src="../js/mini-cart.js" defer></script>
     <script src="../js/product-details.js" defer></script>
   </body>
 </html>

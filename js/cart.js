@@ -1,4 +1,4 @@
-const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+let cart = JSON.parse(localStorage.getItem("cart") || "[]");
 const cartItemsContainer = document.querySelector("#cart-items");
 const emptyCartMessage = document.querySelector("#empty-cart-message");
 const cartItemCount = document.querySelector("#cart-item-count");
@@ -10,6 +10,7 @@ const checkoutButton = document.querySelector(".checkout-button");
 const apiUrl = "https://v2.api.noroff.dev/online-shop";
 
 async function loadCartProduct() {
+  cart = JSON.parse(localStorage.getItem("cart") || "[]");
   try {
     const response = await fetch(apiUrl);
 

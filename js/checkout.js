@@ -4,7 +4,7 @@ if (!checkoutAccessToken) {
   window.location.replace("../account/login.html");
 }
 
-const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+let cart = JSON.parse(localStorage.getItem("cart") || "[]");
 const checkoutItems = document.querySelector("#checkout-items");
 const checkoutItemCount = document.querySelector("#checkout-item-count");
 const checkoutSubtotal = document.querySelector("#checkout-subtotal");
@@ -17,6 +17,14 @@ const apiUrl = "https://v2.api.noroff.dev/online-shop";
 let orderTotal = 0;
 
 async function loadCheckoutProducts() {
+  cart = JSON.parse(localStorage.getItem("cart") || "[]");
+  purchaseButton.disabled = true;
+  orderTotal = 0;
+
+  checkoutItemCount.textContent = "0";
+  checkoutSubtotal.textContent = "0.00 kr";
+  checkoutTotal.textContent = "0.00 kr";
+
   try {
     if (cart.length === 0) {
       checkoutItems.textContent = "Your shopping cart is empty";

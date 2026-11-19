@@ -78,3 +78,41 @@ if (searchButton && searchForm) {
     }
   });
 }
+
+const miniCartButton = document.querySelector(".cart-link");
+const miniCart = document.querySelector("#mini-cart");
+const miniCartClose = document.querySelector(".mini-cart-close");
+
+if (miniCartButton && miniCart && miniCartClose) {
+  miniCartButton.addEventListener("click", () => {
+    miniCart.hidden = !miniCart.hidden;
+    miniCartButton.setAttribute("aria-expanded", !miniCart.hidden);
+    if (!miniCart.hidden) {
+      loadMiniCart();
+    }
+  });
+
+  miniCartClose.addEventListener("click", () => {
+    miniCart.hidden = true;
+    miniCartButton.setAttribute("aria-expanded", "false");
+    miniCartButton.focus();
+  });
+
+  document.addEventListener("click", (event) => {
+    if (
+      !event.composedPath().includes(miniCart) &&
+      !event.composedPath().includes(miniCartButton)
+    ) {
+      miniCart.hidden = true;
+      miniCartButton.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !miniCart.hidden) {
+      miniCart.hidden = true;
+      miniCartButton.setAttribute("aria-expanded", "false");
+      miniCartButton.focus();
+    }
+  });
+}
