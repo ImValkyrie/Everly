@@ -8,6 +8,34 @@ const categoryImages = {
   electronics: "Gold headphones",
 };
 
+const categoryTags = {
+  beauty: ["beauty", "perfume", "skin care", "shampoo"],
+  fashion: [
+    "fashion",
+    "shoes",
+    "bags",
+    "glasses",
+    "jewelry",
+    "watches",
+    "accessories",
+    "watch",
+  ],
+  toys: ["toy"],
+  electronics: [
+    "electronics",
+    "headphones",
+    "storage",
+    "audio",
+    "wearables",
+    "peripherals",
+    "gaming",
+    "computers",
+  ],
+  watches: ["watch", "watches"],
+  audio: ["headphones", "audio"],
+  peripherals: ["peripherals", "computers"],
+};
+
 let allProducts = [];
 let carouselProducts = [];
 let currentSlide = 0;
@@ -26,6 +54,8 @@ async function getProducts() {
     const result = await response.json();
     const products = result.data || [];
     allProducts = products;
+    const params = new URLSearchParams(window.location.search);
+    const selectedCategory = params.get("category");
 
     carouselProducts = [
       products.find((product) => product.title === "Gold Earrings"),
@@ -48,6 +78,9 @@ async function getProducts() {
     status.textContent = "";
 
     displayCategoryImages(products);
+    if (selectedCategory) {
+      filterProducts(selectedCategory);
+    }
     if (carouselProducts.length > 0) {
       showCarouselProduct();
     }
@@ -158,10 +191,11 @@ function displayCategoryImages(products) {
   });
 }
 function filterProducts(category) {
+  const tags = categoryTags[category] || [category];
   const filteredProducts = allProducts.filter(
     (product) =>
-      (category === "toys" && product.title === "Toy car") ||
-      product.tags?.some((tag) => tag.toLowerCase() === category.toLowerCase()),
+      category === "all" ||
+      product.tags?.some((tag) => tags.includes(tag.toLowerCase())),
   );
 
   productGrid.innerHTML = "";

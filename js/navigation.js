@@ -36,3 +36,29 @@ function updateCartCount() {
 }
 
 updateCartCount();
+
+const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+dropdownToggles.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    const menu = toggle.nextElementSibling;
+    dropdownToggles.forEach((otherToggle) => {
+      if (otherToggle !== toggle) {
+        otherToggle.nextElementSibling.hidden = true;
+        otherToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    menu.hidden = !menu.hidden;
+    toggle.setAttribute("aria-expanded", !menu.hidden);
+  });
+});
+
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".nav-dropdown")) {
+    dropdownToggles.forEach((toggle) => {
+      toggle.nextElementSibling.hidden = true;
+      toggle.setAttribute("aria-expanded", false);
+    });
+  }
+});

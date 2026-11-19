@@ -1,208 +1,343 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover your everyday favourites at Everly. Shop beauty, fashion, toys and electronics.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover your everyday favourites at Everly. Shop beauty, fashion, toys and electronics."
+    />
     <title>Everly | Everyday Favourites</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <header>
-        <div class="announcement-bar">
-            <p>Little finds. Everyday joys. Welcome to everly.</p>
-        </div>
+      <div class="announcement-bar">
+        <p>Little finds. Everyday joys. Welcome to everly.</p>
+      </div>
 
-        <nav class="main-nav">
-            <a href="index.html" class="logo">everly.</a>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Beauty</a></li>
-                <li><a href="#">Fashion</a></li>
-                <li><a href="#">Toys</a></li>
-                <li><a href="#">Electronics</a></li>
-                <li class="mobile-login">
-                    <a href="account/login.html">Log in</a>
-                </li>
+      <nav class="main-nav">
+        <a href="index.html" class="logo">everly.</a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html?category=all#collection">Shop</a></li>
+          <li class="nav-dropdown">
+            <button class="dropdown-toggle" type="button" aria-expanded="false">
+              Beauty
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <ul class="dropdown-menu" hidden>
+              <li>
+                <a href="index.html?category=beauty#collection">All beauty</a>
+              </li>
+              <li>
+                <a href="index.html?category=perfume#collection">Perfume</a>
+              </li>
+              <li>
+                <a href="index.html?category=skin%20care#collection"
+                  >Skin care</a
+                >
+              </li>
+              <li>
+                <a href="index.html?category=shampoo#collection">Hair care</a>
+              </li>
             </ul>
-            <div class="nav-actions">
-            <a href="account/login.html" class="login-link">Log in</a>
-            <button class="search-button" type="button" aria-label="Search products">
-                <img src="assets/icons/search.svg" alt="">
+          </li>
+
+          <li class="nav-dropdown">
+            <button class="dropdown-toggle" type="button" aria-expanded="false">
+              Fashion
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
             </button>
-            <a href="cart/index.html" class="cart-link" aria-label="View shopping cart">
-                <img src="assets/icons/shopping-bag.svg" alt="">
-                <span class="cart-count" hidden>0</span>
-            </a>
-                <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
-                <span></span>
-                <span></span>
-                <span></span>
+            <ul class="dropdown-menu" hidden>
+              <li>
+                <a href="index.html?category=fashion#collection">All fashion</a>
+              </li>
+              <li>
+                <a href="index.html?category=shoes#collection">Shoes</a>
+              </li>
+              <li>
+                <a href="index.html?category=bags#collection">Bags</a>
+              </li>
+              <li>
+                <a href="index.html?category=glasses#collection">Glasses</a>
+              </li>
+              <li>
+                <a href="index.html?category=jewelry#collection">Jewelry</a>
+              </li>
+              <li>
+                <a href="index.html?category=watches#collection">Watches</a>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="index.html?category=toys#collection">Toys</a></li>
+
+          <li class="nav-dropdown">
+            <button class="dropdown-toggle" type="button" aria-expanded="false">
+              Electronics
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
             </button>
-            </div>
-        </nav>
+            <ul class="dropdown-menu" hidden>
+              <li>
+                <a href="index.html?category=electronics#collection"
+                  >All electronics</a
+                >
+              </li>
+              <li>
+                <a href="index.html?category=audio#collection"
+                  >Headphone &amp; audio</a
+                >
+              </li>
+              <li>
+                <a href="index.html?category=gaming#collection">Gaming</a>
+              </li>
+              <li>
+                <a href="index.html?category=peripherals#collection"
+                  >Computer accessories</a
+                >
+              </li>
+              <li>
+                <a href="index.html?category=storage#collection">Storage</a>
+              </li>
+              <li>
+                <a href="index.html?category=wearables#collection">Wearables</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="mobile-login">
+            <a href="account/login.html">Log in</a>
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <a href="account/login.html" class="login-link">Log in</a>
+          <button
+            class="search-button"
+            type="button"
+            aria-label="Search products"
+          >
+            <img src="assets/icons/search.svg" alt="" />
+          </button>
+          <a
+            href="cart/index.html"
+            class="cart-link"
+            aria-label="View shopping cart"
+          >
+            <img src="assets/icons/shopping-bag.svg" alt="" />
+            <span class="cart-count" hidden>0</span>
+          </a>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-links"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <p class="hero-label">WELCOME TO EVERLY</p>
-                <h1 class="hero-title">Little finds. Everyday joys.</h1>
-                <p class="hero-description">From playful surprises to everyday essentials, discover something for everyone.</p>
-
-            </div>
-            <div class="hero-carousel">
-            <a href="#" class="carousel-image" aria label="View featured product">
-            </a>
-            <div class="carousel-controls">
-                <button type="button" class="prev-carousel" aria-label="Previous product">←</button>
-                <button type="button" class="next-carousel" aria-label="Next product">→</button>
-            </div>
-            <div class="carousel-dots" aria-label="Carousel pagination">
-                <button class="dot active" aria-label="Go to slide 1" aria-current="true"></button>
-                <button class="dot" aria-label="Go to slide 2"></button>
-                <button class="dot" aria-label="Go to slide 3"></button>
-            </div>
-            </div>
-            <a href="#" class="hero-button">View product</a>
-        </section>
-
-        <section class="categories">
-            <h2>Shop by Category</h2>
-            <div class="category-grid">
-                <a href="#collection" class="category-card" data-category="beauty">
-                    <div class="category-image"></div>
-                    <h3>Beauty</h3>
-                </a>
-                <a href="#collection" class="category-card" data-category="fashion">
-                    <div class="category-image"></div>
-                    <h3>Fashion</h3>
-                </a>
-                <a href="#collection" class="category-card" data-category="toys">
-                    <div class="category-image"></div>
-                    <h3>Toys</h3>
-                </a>
-                <a href="#collection" class="category-card" data-category="electronics">
-                    <div class="category-image"></div>
-                    <h3>Electronics</h3>
-                </a>
-            </div>
-        </section>
-
-        <section class="products" id="collection">
-            <h2>Explore our collection</h2>
-            <p class="products-status" role="status" aria-live="polite"></p>
-            <div class="product-grid"></div>
-            <button type ="button" class="all-products-btn">
-                All products
+      <section class="hero">
+        <div class="hero-content">
+          <p class="hero-label">WELCOME TO EVERLY</p>
+          <h1 class="hero-title">Little finds. Everyday joys.</h1>
+          <p class="hero-description">
+            From playful surprises to everyday essentials, discover something
+            for everyone.
+          </p>
+        </div>
+        <div class="hero-carousel">
+          <a href="#" class="carousel-image" aria label="View featured product">
+          </a>
+          <div class="carousel-controls">
+            <button
+              type="button"
+              class="prev-carousel"
+              aria-label="Previous product"
+            >
+              ←
             </button>
-        </section>
+            <button
+              type="button"
+              class="next-carousel"
+              aria-label="Next product"
+            >
+              →
+            </button>
+          </div>
+          <div class="carousel-dots" aria-label="Carousel pagination">
+            <button
+              class="dot active"
+              aria-label="Go to slide 1"
+              aria-current="true"
+            ></button>
+            <button class="dot" aria-label="Go to slide 2"></button>
+            <button class="dot" aria-label="Go to slide 3"></button>
+          </div>
+        </div>
+        <a href="#" class="hero-button">View product</a>
+      </section>
 
-        <section class="newsletter">
-            <div class="newsletter-content">
-                <h2>A little joy in your inbox</h2>
-                <p>Subscribe for updates, exclusive offers and new arrivals</p>
-            </div>
-            <form class="newsletter-form">
-                <label for="newsletter-email">Email address</label>
-                <input
-                    type="email"
-                    id="newsletter-email"
-                    name="email"
-                    placeholder="Your email address"
-                    autocomplete="email"
-                    required
-                >
-                <button type="submit">SUBSCRIBE</button>
-            </form>
-        </section>
+      <section class="categories">
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+          <a href="#collection" class="category-card" data-category="beauty">
+            <div class="category-image"></div>
+            <h3>Beauty</h3>
+          </a>
+          <a href="#collection" class="category-card" data-category="fashion">
+            <div class="category-image"></div>
+            <h3>Fashion</h3>
+          </a>
+          <a href="#collection" class="category-card" data-category="toys">
+            <div class="category-image"></div>
+            <h3>Toys</h3>
+          </a>
+          <a
+            href="#collection"
+            class="category-card"
+            data-category="electronics"
+          >
+            <div class="category-image"></div>
+            <h3>Electronics</h3>
+          </a>
+        </div>
+      </section>
+
+      <section class="products" id="collection">
+        <h2>Explore our collection</h2>
+        <p class="products-status" role="status" aria-live="polite"></p>
+        <div class="product-grid"></div>
+        <button type="button" class="all-products-btn">All products</button>
+      </section>
+
+      <section class="newsletter">
+        <div class="newsletter-content">
+          <h2>A little joy in your inbox</h2>
+          <p>Subscribe for updates, exclusive offers and new arrivals</p>
+        </div>
+        <form class="newsletter-form">
+          <label for="newsletter-email">Email address</label>
+          <input
+            type="email"
+            id="newsletter-email"
+            name="email"
+            placeholder="Your email address"
+            autocomplete="email"
+            required
+          />
+          <button type="submit">SUBSCRIBE</button>
+        </form>
+      </section>
     </main>
 
-        <footer class="site-footer">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">everly.</a>
-                    <p>Little finds. Everyday joys.</p>
-                    <div class="footer-socials">
-                        <a href="#" aria-label="Instagram">
-                            <img src="assets/icons/instagram.svg" alt="">
-                        </a>
-                        <a href="#" aria-label="Facebook">
-                            <img src="assets/icons/facebook.svg" alt="">
-                        </a>
-                        <a href="#" aria-label="TikTok">
-                            <img src="assets/icons/tiktok.svg" alt="">
-                        </a>
-                        <a href="#" aria-label="YouTube">
-                            <img src="assets/icons/youtube.svg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <div class="footer-heading">
-                    <img src="assets/icons/customerheadset.svg" alt="" class="footer-customerheadset-icon">
-                    <h3>Customer support</h3>
-                    </div>
-                    <ul>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Shipping &amp; delivery</a></li>
-                        <li><a href="#">Returns &amp; refunds</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <div class="footer-heading">
-                    <img src="assets/icons/shoppingbag2.svg" alt="" class="footer-shoppingbag2-icon">
-                    <h3>Shop</h3>
-                    </div>
-                    <ul>
-                    <li><a href="#">All products</a></li>
-                    <li><a href="#">Beauty</a></li>
-                    <li><a href="#">Fashion</a></li>
-                    <li><a href="#">Toys</a></li>
-                    <li><a href="#">Electronics</a></li>
-                    </ul>
-                    </div>
-                <div class="footer-column">
-                    <div class="footer-heading">
-                    <img src="assets/icons/info.svg" alt="" class="footer-info-icon">
-                    <h3>About Everly</h3>
-                    </div>
-                    <ul>
-                    <li><a href="#">Our story</a></li>
-                    <li><a href="#">Sustainability</a></li>
-                    <li><a href="#">Terms &amp; conditions</a></li>
-                    <li><a href="#">Privacy policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-help">
-                    <div class="footer-help-text">
-                    <h3>Need help?</h3>
-                    <p>We're here for you!</p>
-                    </div>
-                    <a href="#" class="footer-support-button">
-                    <img src="assets/icons/customerheadset.svg" alt="" class="footer-customerheadset-icon">
-                        CONTACT SUPPORT
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 Everly. All rights reserved.</p>
-            <div class="footer-payments">
-                <img src="assets/icons/visa.svg" alt="Visa">
-                <img src="assets/icons/applepay.svg" alt="ApplePay">
-                <img src="assets/icons/paypal.svg" alt="PayPal">
-            </div>
-            </div>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">everly.</a>
+          <p>Little finds. Everyday joys.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram">
+              <img src="assets/icons/instagram.svg" alt="" />
+            </a>
+            <a href="#" aria-label="Facebook">
+              <img src="assets/icons/facebook.svg" alt="" />
+            </a>
+            <a href="#" aria-label="TikTok">
+              <img src="assets/icons/tiktok.svg" alt="" />
+            </a>
+            <a href="#" aria-label="YouTube">
+              <img src="assets/icons/youtube.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <div class="footer-heading">
+            <img
+              src="assets/icons/customerheadset.svg"
+              alt=""
+              class="footer-customerheadset-icon"
+            />
+            <h3>Customer support</h3>
+          </div>
+          <ul>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping &amp; delivery</a></li>
+            <li><a href="#">Returns &amp; refunds</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <div class="footer-heading">
+            <img
+              src="assets/icons/shoppingbag2.svg"
+              alt=""
+              class="footer-shoppingbag2-icon"
+            />
+            <h3>Shop</h3>
+          </div>
+          <ul>
+            <li><a href="#">All products</a></li>
+            <li><a href="#">Beauty</a></li>
+            <li><a href="#">Fashion</a></li>
+            <li><a href="#">Toys</a></li>
+            <li><a href="#">Electronics</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <div class="footer-heading">
+            <img src="assets/icons/info.svg" alt="" class="footer-info-icon" />
+            <h3>About Everly</h3>
+          </div>
+          <ul>
+            <li><a href="#">Our story</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Terms &amp; conditions</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-help">
+          <div class="footer-help-text">
+            <h3>Need help?</h3>
+            <p>We're here for you!</p>
+          </div>
+          <a href="#" class="footer-support-button">
+            <img
+              src="assets/icons/customerheadset.svg"
+              alt=""
+              class="footer-customerheadset-icon"
+            />
+            CONTACT SUPPORT
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Everly. All rights reserved.</p>
+        <div class="footer-payments">
+          <img src="assets/icons/visa.svg" alt="Visa" />
+          <img src="assets/icons/applepay.svg" alt="ApplePay" />
+          <img src="assets/icons/paypal.svg" alt="PayPal" />
+        </div>
+      </div>
     </footer>
-    
+
     <script src="js/navigation.js" defer></script>
     <script src="js/products.js" defer></script>
-</body>
+  </body>
 </html>
