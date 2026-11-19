@@ -131,6 +131,8 @@
             class="search-button"
             type="button"
             aria-label="Search products"
+            aria-expanded="false"
+            aria-controls="search-form"
           >
             <img src="../assets/icons/search.svg" alt="" />
           </button>
@@ -155,6 +157,24 @@
           </button>
         </div>
       </nav>
+      <form
+        id="search-form"
+        class="search-form"
+        role="search"
+        action="../index.html#collection"
+        method="get"
+        hidden
+      >
+        <input
+          type="search"
+          name="search"
+          id="search-input"
+          placeholder="Search products..."
+          aria-label="Search products"
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
     </header>
 
     <main class="success-page">

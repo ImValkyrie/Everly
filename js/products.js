@@ -56,6 +56,7 @@ async function getProducts() {
     allProducts = products;
     const params = new URLSearchParams(window.location.search);
     const selectedCategory = params.get("category");
+    const searchQuery = params.get("search");
 
     carouselProducts = [
       products.find((product) => product.title === "Gold Earrings"),
@@ -78,7 +79,9 @@ async function getProducts() {
     status.textContent = "";
 
     displayCategoryImages(products);
-    if (selectedCategory) {
+    if (searchQuery) {
+      searchProducts(searchQuery);
+    } else if (selectedCategory) {
       filterProducts(selectedCategory);
     }
     if (carouselProducts.length > 0) {
@@ -191,6 +194,7 @@ function displayCategoryImages(products) {
   });
 }
 function filterProducts(category) {
+  document.querySelector(".products-status").textContent = "";
   const tags = categoryTags[category] || [category];
   const filteredProducts = allProducts.filter(
     (product) =>
@@ -203,6 +207,26 @@ function filterProducts(category) {
     renderProductCard(product);
   });
 }
+function searchProducts(query) {
+  const searchTerm = query.trim().toLowerCase();
+  const status = document.querySelector(".products-status");
+
+  const filteredProducts = allProducts.filter(
+    (product) =>
+      product.title.toLowerCase().includes(searchTerm) ||
+      product.description.toLowerCase().includes(searchTerm) ||
+      product.tags?.some((tag) => tag.toLowerCase().includes(searchTerm)),
+  );
+  productGrid.innerHTML = "";
+  filteredProducts.forEach((product) => {
+    renderProductCard(product);
+  });
+  if (filteredProducts.length === 0) {
+    status.textContent = `No products found for "${query}". Try another search.`;
+  } else {
+    status.textContent = `Search results for "${query}" (${filteredProducts.length})`;
+  }
+}
 
 document.querySelectorAll(".category-card").forEach((card) => {
   card.addEventListener("click", () => {
@@ -211,6 +235,7 @@ document.querySelectorAll(".category-card").forEach((card) => {
 });
 
 document.querySelector(".all-products-btn").addEventListener("click", () => {
+  document.querySelector(".products-status").textContent = "";
   productGrid.innerHTML = "";
 
   allProducts.forEach((product) => {

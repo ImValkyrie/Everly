@@ -62,3 +62,19 @@ document.addEventListener("click", (event) => {
     });
   }
 });
+
+const searchButton = document.querySelector(".search-button");
+const searchForm = document.querySelector("#search-form");
+const searchInput = document.querySelector("#search-input");
+
+if (searchButton && searchForm) {
+  searchButton.addEventListener("click", () => {
+    searchForm.hidden = !searchForm.hidden;
+
+    searchButton.setAttribute("aria-expanded", !searchForm.hidden);
+
+    if (!searchForm.hidden) {
+      searchInput.focus();
+    }
+  });
+}
