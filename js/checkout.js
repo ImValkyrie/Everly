@@ -55,8 +55,6 @@ async function loadCheckoutProducts() {
       );
 
       if (matchingProduct) {
-        console.log("Product", matchingProduct.title);
-        console.log("Quantity", cartItem.quantity);
         const productRow = document.createElement("div");
         productRow.classList.add("cart-item");
         const productTitle = document.createElement("h3");
@@ -105,8 +103,6 @@ async function loadCheckoutProducts() {
     checkoutTotal.textContent = `${subtotal.toFixed(2)} kr`;
     orderTotal = subtotal;
     purchaseButton.disabled = false;
-
-    console.log("Products from API", products);
   } catch (error) {
     console.error("Error loading checkout products", error);
     checkoutItems.textContent = "Unable to load products. Please try again.";
@@ -137,4 +133,3 @@ checkoutForm.addEventListener("submit", (event) => {
 });
 
 loadCheckoutProducts();
-console.log("Saved cart:", cart);

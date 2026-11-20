@@ -21,8 +21,6 @@ loginForm.addEventListener("submit", async (event) => {
     });
     const result = await response.json();
     if (response.ok) {
-      console.log("Login successful!");
-
       const accessToken = result.data.accessToken;
       localStorage.setItem("accessToken", accessToken);
       window.location.href = "../index.html";

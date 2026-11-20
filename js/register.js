@@ -32,8 +32,6 @@ registerForm.addEventListener("submit", async (event) => {
       body: JSON.stringify(registerData),
     });
     const result = await response.json();
-    console.log("Registration status", response.status);
-    console.log("Registration response", result);
     if (response.ok) {
       registerSuccess.textContent =
         "Account created successfully! You can now log in.";

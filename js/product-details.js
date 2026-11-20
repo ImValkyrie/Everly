@@ -48,7 +48,6 @@ async function getProduct() {
       "No reviews yet. Be the first to share your thoughts!";
   } else {
     product.reviews.forEach((review) => {
-      console.log(review);
       const reviewCard = document.createElement("div");
       reviewCard.classList.add("review-card");
       reviewsElement.appendChild(reviewCard);

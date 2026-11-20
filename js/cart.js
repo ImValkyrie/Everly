@@ -35,8 +35,6 @@ async function loadCartProduct() {
       );
 
       if (matchingProduct) {
-        console.log("Product", matchingProduct.title);
-        console.log("Quantity", cartItem.quantity);
         const productRow = document.createElement("div");
         productRow.classList.add("cart-item");
         const productTitle = document.createElement("h3");
@@ -143,8 +141,6 @@ async function loadCartProduct() {
     cartItemCount.textContent = itemCount;
     cartSubtotal.textContent = `${subtotal.toFixed(2)} kr`;
     cartTotal.textContent = `${subtotal.toFixed(2)} kr`;
-
-    console.log("Products from API", products);
   } catch (error) {
     console.error("Error loading cart products", error);
   }
@@ -157,5 +153,3 @@ clearCartButton.addEventListener("click", () => {
   loadCartProduct();
 });
 loadCartProduct();
-
-console.log("Saved cart:", cart);

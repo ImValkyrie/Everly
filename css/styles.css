@@ -937,6 +937,8 @@ header {
 }
 
 #product-rating-value.no-rating {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
     color: #352D27;
 }
 
@@ -995,6 +997,12 @@ header {
     font-family: "Inter", sans-serif;
     font-size: 16px;
 }
+#login-error {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #352D27;
+    margin: 12px 0 20px;
+}
 
 .login-button {
     width: 100%;
@@ -1044,6 +1052,13 @@ header {
 
 .register-button:hover {
     background-color: #E9DFD2;
+}
+
+#register-error {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #352D27;
+    margin: 12px 0 20px;
 }
 
 /*---NEWSLETTER---*/
