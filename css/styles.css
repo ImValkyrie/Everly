@@ -1439,18 +1439,6 @@ header {
     background: #f5f0e8;
 }
 
-.payment-logos {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-left: auto;
-}
-
-.payment-logos img {
-    width: 40px;
-    height: 24px;
-    object-fit: contain;
-}
 
 .place-order-button {
     display: block;
@@ -1516,7 +1504,7 @@ header {
 .success-page {
     font-family: "Inter", sans-serif;
     color: #352D27;
-    max-width: 1440;
+    max-width: 1440px;
     min-height: 750px;
     margin: 0 auto;
     padding: 48px 24px 80px;
@@ -1606,6 +1594,8 @@ header {
     color: #FFFCF8;
     text-decoration: none;
     letter-spacing: -1.5px;
+    line-height: 1;
+    display: block;
 }
 
 .footer-brand p {
@@ -1615,6 +1605,7 @@ header {
     color: #FFFCF8;
     margin-top: 12px;
 }
+
 
 .footer-socials {
     display: flex;
@@ -1701,10 +1692,9 @@ header {
     text-underline-offset: 5px;
 }
 
-.footer-support-button img {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
+.footer-support-button i {
+    font-size: 20px;
+    color: inherit;
 }
 
 .footer-heading {
@@ -1718,11 +1708,11 @@ header {
     margin-bottom: 0;
 }
 
-.footer-heading img {
+.footer-heading i {
+    font-size: 18px;
+    color: #FFFCF8;
     width: 18px;
-    height: 18px;
-    object-fit: contain;
-    margin-bottom: 0;
+    text-align: center;
 }
 
 .footer-bottom {
@@ -1747,10 +1737,9 @@ header {
     gap: 32px;
 }
 
-.footer-payments img {
-    height: 32px;
-    width: auto;
-    object-fit: contain;
+.footer-payments i {
+    font-size: 20px;
+    color: #FFFCF8;
 }
 
 .menu-toggle {
