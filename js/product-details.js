@@ -95,7 +95,7 @@ async function getProduct() {
       return;
     }
 
-    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    const cart = JSON.parse(localStorage.getItem("everly-cart") || "[]");
     const existingProduct = cart.find((item) => {
       return item.id === product.id;
     });
@@ -107,7 +107,7 @@ async function getProduct() {
         quantity: 1,
       });
     }
-    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("everly-cart", JSON.stringify(cart));
     updateCartCount();
   });
 }

@@ -3,7 +3,7 @@ const miniCartSubtotal = document.querySelector("#mini-cart-subtotal");
 const miniCartApiUrl = "https://v2.api.noroff.dev/online-shop";
 
 async function loadMiniCart() {
-  const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+  const cart = JSON.parse(localStorage.getItem("everly-cart") || "[]");
   miniCartItems.innerHTML = "";
   if (cart.length === 0) {
     miniCartItems.textContent = "Your shopping cart is empty";
@@ -72,7 +72,7 @@ async function loadMiniCart() {
           if (itemIndex !== -1) {
             cart.splice(itemIndex, 1);
 
-            localStorage.setItem("cart", JSON.stringify(cart));
+            localStorage.setItem("everly-cart", JSON.stringify(cart));
             updateCartCount();
             loadMiniCart();
 

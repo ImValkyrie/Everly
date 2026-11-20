@@ -1,4 +1,4 @@
-let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+let cart = JSON.parse(localStorage.getItem("everly-cart") || "[]");
 const cartItemsContainer = document.querySelector("#cart-items");
 const emptyCartMessage = document.querySelector("#empty-cart-message");
 const cartItemCount = document.querySelector("#cart-item-count");
@@ -10,7 +10,7 @@ const checkoutButton = document.querySelector(".checkout-button");
 const apiUrl = "https://v2.api.noroff.dev/online-shop";
 
 async function loadCartProduct() {
-  cart = JSON.parse(localStorage.getItem("cart") || "[]");
+  cart = JSON.parse(localStorage.getItem("everly-cart") || "[]");
   try {
     const response = await fetch(apiUrl);
 
@@ -67,7 +67,7 @@ async function loadCartProduct() {
           if (itemIndex !== -1) {
             cart.splice(itemIndex, 1);
 
-            localStorage.setItem("cart", JSON.stringify(cart));
+            localStorage.setItem("everly-cart", JSON.stringify(cart));
             updateCartCount();
             loadCartProduct();
           }
@@ -100,7 +100,7 @@ async function loadCartProduct() {
           if (cartItem.quantity > 1) {
             cartItem.quantity -= 1;
 
-            localStorage.setItem("cart", JSON.stringify(cart));
+            localStorage.setItem("everly-cart", JSON.stringify(cart));
             updateCartCount();
             loadCartProduct();
           }
@@ -112,7 +112,7 @@ async function loadCartProduct() {
         increaseButton.setAttribute("aria-label", "Increase quantity");
         increaseButton.addEventListener("click", () => {
           cartItem.quantity += 1;
-          localStorage.setItem("cart", JSON.stringify(cart));
+          localStorage.setItem("everly-cart", JSON.stringify(cart));
           updateCartCount();
           loadCartProduct();
         });
@@ -148,7 +148,7 @@ async function loadCartProduct() {
 
 clearCartButton.addEventListener("click", () => {
   cart.length = 0;
-  localStorage.setItem("cart", JSON.stringify(cart));
+  localStorage.setItem("everly-cart", JSON.stringify(cart));
   updateCartCount();
   loadCartProduct();
 });

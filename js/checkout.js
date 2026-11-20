@@ -4,7 +4,7 @@ if (!checkoutAccessToken) {
   window.location.replace("../account/login.html");
 }
 
-let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+let cart = JSON.parse(localStorage.getItem("everly-cart") || "[]");
 const checkoutItems = document.querySelector("#checkout-items");
 const checkoutItemCount = document.querySelector("#checkout-item-count");
 const checkoutSubtotal = document.querySelector("#checkout-subtotal");
@@ -17,7 +17,7 @@ const apiUrl = "https://v2.api.noroff.dev/online-shop";
 let orderTotal = 0;
 
 async function loadCheckoutProducts() {
-  cart = JSON.parse(localStorage.getItem("cart") || "[]");
+  cart = JSON.parse(localStorage.getItem("everly-cart") || "[]");
   purchaseButton.disabled = true;
   orderTotal = 0;
 
@@ -128,7 +128,7 @@ checkoutForm.addEventListener("submit", (event) => {
 
   localStorage.setItem("lastOrder", JSON.stringify(order));
 
-  localStorage.removeItem("cart");
+  localStorage.removeItem("everly-cart");
   window.location.href = "../success/index.html";
 });
 

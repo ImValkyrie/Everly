@@ -24,7 +24,7 @@ if (navAccessToken) {
 function updateCartCount() {
   if (!cartCount) return;
 
-  const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+  const cart = JSON.parse(localStorage.getItem("everly-cart") || "[]");
   let totalQuantity = 0;
 
   cart.forEach((item) => {
