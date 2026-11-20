@@ -1642,8 +1642,8 @@ header {
     align-items: start;
 }
 
-.footer-column h3,
-.footer-help h3 {
+.footer-column h2,
+.footer-help h2 {
     font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 600;
@@ -2254,4 +2254,9 @@ header {
         margin-bottom: 0;
     }
 
+}
+
+
+[hidden] {
+    display: none !important;
 }

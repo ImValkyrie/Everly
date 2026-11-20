@@ -120,6 +120,7 @@ checkoutForm.addEventListener("submit", (event) => {
   if (purchaseButton.disabled) {
     return;
   }
+  purchaseButton.disabled = true;
 
   const order = {
     orderNumber: `EV-${Date.now().toString().slice(-6)}`,

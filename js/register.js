@@ -1,6 +1,7 @@
 const registerForm = document.querySelector("#register-form");
 const registerError = document.querySelector("#register-error");
 const registerSuccess = document.querySelector("#register-success");
+const registerButton = registerForm.querySelector('button[type="submit"]');
 registerForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   registerError.hidden = true;
@@ -23,6 +24,7 @@ registerForm.addEventListener("submit", async (event) => {
     email: email,
     password: password,
   };
+  registerButton.disabled = true;
   try {
     const response = await fetch(registerUrl, {
       method: "POST",
@@ -45,5 +47,7 @@ registerForm.addEventListener("submit", async (event) => {
   } catch (error) {
     registerError.textContent = "Something went wrong. Please try again later.";
     registerError.hidden = false;
+  } finally {
+    registerButton.disabled = false;
   }
 });

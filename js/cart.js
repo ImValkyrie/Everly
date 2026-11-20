@@ -11,6 +11,10 @@ const apiUrl = "https://v2.api.noroff.dev/online-shop";
 
 async function loadCartProduct() {
   cart = JSON.parse(localStorage.getItem("everly-cart") || "[]");
+  cartTableHeader.hidden = cart.length === 0;
+  clearCartButton.hidden = cart.length === 0;
+  checkoutButton.hidden = cart.length === 0;
+  emptyCartMessage.hidden = cart.length > 0;
   try {
     const response = await fetch(apiUrl);
 
@@ -23,11 +27,6 @@ async function loadCartProduct() {
     let subtotal = 0;
     let itemCount = 0;
     cartItemsContainer.innerHTML = "";
-    emptyCartMessage.hidden = cart.length > 0;
-
-    cartTableHeader.hidden = cart.length === 0;
-    clearCartButton.hidden = cart.length === 0;
-    checkoutButton.hidden = cart.length === 0;
 
     cart.forEach((cartItem) => {
       const matchingProduct = products.find(
@@ -143,6 +142,10 @@ async function loadCartProduct() {
     cartTotal.textContent = `${subtotal.toFixed(2)} kr`;
   } catch (error) {
     console.error("Error loading cart products", error);
+    cartItemsContainer.textContent =
+      "Unable to load your shopping cart. Please try again later.";
+    checkoutButton.hidden = true;
+    emptyCartMessage.hidden = true;
   }
 }
 

@@ -260,7 +260,7 @@
                 id="address"
                 name="address"
                 placeholder="Enter your address"
-                autocomplete="street-address"
+                autocomplete="address-line1"
                 required
               />
             </div>
@@ -371,13 +371,17 @@
               class="fa-solid fa-headset footer-customerheadset-icon"
               aria-hidden="true"
             ></i>
-            <h3>Customer support</h3>
+            <h2>Customer support</h2>
           </div>
           <ul>
-            <li><a href="#">Contact us</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Shipping &amp; delivery</a></li>
-            <li><a href="#">Returns &amp; refunds</a></li>
+            <li><a href="#" class="coming-soon-link">Contact us</a></li>
+            <li><a href="#" class="coming-soon-link">FAQ</a></li>
+            <li>
+              <a href="#" class="coming-soon-link">Shipping &amp; delivery</a>
+            </li>
+            <li>
+              <a href="#" class="coming-soon-link">Returns &amp; refunds</a>
+            </li>
           </ul>
         </div>
         <div class="footer-column">
@@ -386,14 +390,24 @@
               class="fa-solid fa-bag-shopping footer-shoppingbag2-icon"
               aria-hidden="true"
             ></i>
-            <h3>Shop</h3>
+            <h2>Shop</h2>
           </div>
           <ul>
-            <li><a href="#">All products</a></li>
-            <li><a href="#">Beauty</a></li>
-            <li><a href="#">Fashion</a></li>
-            <li><a href="#">Toys</a></li>
-            <li><a href="#">Electronics</a></li>
+            <li>
+              <a href="../index.html?category=all#collection">All products</a>
+            </li>
+            <li>
+              <a href="../index.html?category=beauty#collection">Beauty</a>
+            </li>
+            <li>
+              <a href="../index.html?category=fashion#collection">Fashion</a>
+            </li>
+            <li><a href="../index.html?category=toys#collection">Toys</a></li>
+            <li>
+              <a href="../index.html?category=electronics#collection"
+                >Electronics</a
+              >
+            </li>
           </ul>
         </div>
         <div class="footer-column">
@@ -402,21 +416,23 @@
               class="fa-solid fa-circle-info footer-info-icon"
               aria-hidden="true"
             ></i>
-            <h3>About Everly</h3>
+            <h2>About Everly</h2>
           </div>
           <ul>
-            <li><a href="#">Our story</a></li>
-            <li><a href="#">Sustainability</a></li>
-            <li><a href="#">Terms &amp; conditions</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#" class="coming-soon-link">Our story</a></li>
+            <li><a href="#" class="coming-soon-link">Sustainability</a></li>
+            <li>
+              <a href="#" class="coming-soon-link">Terms &amp; conditions</a>
+            </li>
+            <li><a href="#" class="coming-soon-link">Privacy policy</a></li>
           </ul>
         </div>
         <div class="footer-help">
           <div class="footer-help-text">
-            <h3>Need help?</h3>
+            <h2>Need help?</h2>
             <p>We're here for you!</p>
           </div>
-          <a href="#" class="footer-support-button">
+          <a href="#" class="footer-support-button coming-soon-link">
             <i
               class="fa-solid fa-headset footer-customerheadset-icon"
               aria-hidden="true"
@@ -438,6 +454,15 @@
         </div>
       </div>
     </footer>
+
+    <dialog id="coming-soon-dialog">
+      <h2>Coming soon!</h2>
+      <p>
+        We're working on something lovely. This feature isn't available just
+        yet.
+      </p>
+      <button type="button" id="close-coming-soon">Got it</button>
+    </dialog>
 
     <script src="../js/navigation.js" defer></script>
     <script src="../js/mini-cart.js" defer></script>

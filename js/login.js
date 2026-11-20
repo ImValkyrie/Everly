@@ -1,9 +1,13 @@
 const loginForm = document.querySelector(".login-form");
 const loginError = document.querySelector("#login-error");
+const loginButton = loginForm.querySelector('button[type="submit"]');
 loginForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   loginError.hidden = true;
   loginError.textContent = "";
+
+  loginButton.disabled = true;
+
   try {
     const email = document.querySelector("#email").value.trim();
     const password = document.querySelector("#password").value;
@@ -31,5 +35,7 @@ loginForm.addEventListener("submit", async (event) => {
   } catch (error) {
     loginError.textContent = "Something went wrong. Please try again later";
     loginError.hidden = false;
+  } finally {
+    loginButton.disabled = false;
   }
 });
