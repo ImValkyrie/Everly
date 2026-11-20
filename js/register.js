@@ -36,6 +36,7 @@ registerForm.addEventListener("submit", async (event) => {
       registerSuccess.textContent =
         "Account created successfully! You can now log in.";
       registerSuccess.hidden = false;
+      registerForm.reset();
     } else {
       registerError.textContent =
         result.errors?.[0]?.message || "Registration failed. Please try again.";

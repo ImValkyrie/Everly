@@ -116,3 +116,20 @@ if (miniCartButton && miniCart && miniCartClose) {
     }
   });
 }
+
+const comingSoonDialog = document.querySelector("#coming-soon-dialog");
+const comingSoonLinks = document.querySelectorAll(".coming-soon-link");
+const closeComingSoon = document.querySelector("#close-coming-soon");
+
+if (comingSoonDialog) {
+  comingSoonLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      comingSoonDialog.showModal();
+    });
+  });
+
+  closeComingSoon.addEventListener("click", () => {
+    comingSoonDialog.close();
+  });
+}

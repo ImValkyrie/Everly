@@ -1054,7 +1054,8 @@ header {
     background-color: #E9DFD2;
 }
 
-#register-error {
+#register-error,
+#register-success {
     font-family: "Inter", sans-serif;
     font-size: 14px;
     color: #352D27;
@@ -1728,6 +1729,52 @@ header {
     color: #FFFCF8;
     width: 18px;
     text-align: center;
+}
+
+#coming-soon-dialog {
+    padding: 32px;
+    border: none;
+    border-radius: 12px;
+    background-color: #FFFCF8;
+    color: #352D27;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    margin: auto;
+}
+
+#coming-soon-dialog h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+#coming-soon-dialog p {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+#close-coming-soon {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFFCF8;
+    background-color: #66705A;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 28px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#close-coming-soon:hover {
+    background-color: #4f5946;
+}
+
+#coming-soon-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .footer-bottom {
